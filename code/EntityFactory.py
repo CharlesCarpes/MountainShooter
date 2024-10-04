@@ -7,7 +7,7 @@ from code.Const import WIN_WIDTH, WIN_HEIGHT
 from code.Enemy import Enemy
 from code.Player import Player
 
-#Teste
+#Teste2 como novo pycharm
 class EntityFactory:
 
     @staticmethod
