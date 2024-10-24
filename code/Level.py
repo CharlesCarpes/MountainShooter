@@ -18,9 +18,16 @@ from code.Player import Player
 #modificando
 class Level:
     def __init__(self, window: Surface, name: str, game_mode: str, player_score: list[int]):
-        self.timeout = TIMEOUT_LEVEL
-        self.window = window
         self.name = name
+        # Resolvendo o item 4 da forma mais burra possível!
+        # Acho que seria mais elegante criar uma Const para cada Level.
+        # Mas por enquanto resolve a questão. Se tiver tempo eu ajusto no futuro!
+        if self.name == 'Level3':
+            timeout_level_adjust = TIMEOUT_LEVEL*2
+            self.timeout = timeout_level_adjust
+        else:
+            self.timeout = TIMEOUT_LEVEL
+        self.window = window
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity(self.name + 'Bg'))
