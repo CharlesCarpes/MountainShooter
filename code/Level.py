@@ -70,6 +70,7 @@ class Level:
                     self.entity_list.append(EntityFactory.get_entity(choice))
                 elif event.type == EVENT_ENEMY and self.name == 'Level3':
                     self.entity_list.append(EntityFactory.get_entity('Enemy3'))
+                # Aqui termina a modificação para que o Level 3 tenha apenas os inimigo adequado
                 if event.type == EVENT_TIMEOUT:
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
