@@ -63,9 +63,13 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
-                if event.type == EVENT_ENEMY:
+                # Inserindo os inimigos corretos.
+                # Aqui fiz questão de ser bem específico quando aos inimigos de cada Level
+                if event.type == EVENT_ENEMY and self.name != 'Level3':
                     choice = random.choice(('Enemy1', 'Enemy2'))
                     self.entity_list.append(EntityFactory.get_entity(choice))
+                elif event.type == EVENT_ENEMY and self.name == 'Level3':
+                    self.entity_list.append(EntityFactory.get_entity('Enemy3'))
                 if event.type == EVENT_TIMEOUT:
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
