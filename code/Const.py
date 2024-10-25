@@ -7,6 +7,8 @@ C_WHITE = (255, 255, 255)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
 
+
+
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
 EVENT_TIMEOUT = pygame.USEREVENT + 2
@@ -29,7 +31,7 @@ ENTITY_SPEED = {
     'Level3Bg3': 3,
     'Level3Bg4': 4,
     'Player1': 3,
-    'Player1Shot': 1,
+    'Player1Shot': 2,
     'Player2': 3,
     'Player2Shot': 3,
     'Enemy1': 1,
@@ -131,12 +133,16 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1': 20,
+    'Player1': 5,
     'Player2': 15,
     'Enemy1': 100,
     'Enemy2': 200,
-    'Enemy3': 300,
+    'Enemy3': 80,
 }
+# H
+
+HORIZONTAL_SPEED = 3
+
 
 # M
 MENU_OPTION = ('NEW GAME 1P',
@@ -162,10 +168,14 @@ SPAWN_TIME = 400
 
 # T
 TIMEOUT_STEP = 100  # 100ms
-TIMEOUT_LEVEL = 5000  # 20s
+TIMEOUT_LEVEL = 10000  # 20s
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# V
+
+VERTICAL_SPEED = 2
 
 # S
 SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
